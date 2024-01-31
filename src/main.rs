@@ -119,7 +119,14 @@ pub fn main() {
 
     /* Implement your attack here, to find the index of the encrypted message */
 
-    unimplemented!();
+    for i in 0..messages.len() {
+        let share_key = (blob.c.1 - messages[i].0).into_affine();
+        if Bls12_381::pairing(share_key, blob.c.hash_to_curve())
+            == Bls12_381::pairing(blob.rec_pk, blob.s)
+        {
+            println!("{:?}", i);
+        }
+    }
 
     /* End of attack */
 }

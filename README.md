@@ -27,6 +27,8 @@ Bob designed a new one time scheme, that's based on the tried and true method of
 
 # Writeup
 
+https://hackmd.io/@liquan/H1srq-D5T
+
 ## ElGamal encryption in ECC
 
 ### Key generation
